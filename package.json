@@ -1,6 +1,6 @@
 {
   "name": "cookie-garden-helper",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Automate your garden in Cookie Clicker.",
   "keywords": [
     "JavaScript",
@@ -29,9 +29,9 @@
       "url": "https://www.linkedin.com/in/aranleite"
     }
   ],
-  "main": "cookie-garden-helper.js",
+  "main": "dist/CcookieGardenHelper.js",
   "scripts": {
-    "build": "merge.sh && git add cookie-garden-helper.js"
+    "build": "webpack"
   },
   "husky": {
     "hooks": {
@@ -45,6 +45,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.17.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^7.1.0",
@@ -52,7 +56,9 @@
     "eslint-plugin-prettier": "^3.3.0",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
   },
   "ccrepo": {
     "icon": [

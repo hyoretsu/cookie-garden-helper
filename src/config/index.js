@@ -1,4 +1,4 @@
-const defaultConfigs = {
+export const defaultConfigs = {
   autoHarvest: false,
   autoHarvestAllMature: false,
   autoHarvestNewSeeds: true,
@@ -25,17 +25,7 @@ const defaultConfigs = {
   },
   savedPlot: [],
 };
-const configs = {};
-Object.assign(configs, defaultConfigs);
-let changedConfigs = {};
 
-Game.registerMod('Cookie Garden Helper', {
-  save: () => {
-    Object.assign(configs, changedConfigs);
-    return JSON.stringify(changedConfigs);
-  },
-  load: saveString => {
-    changedConfigs = JSON.parse(saveString);
-    Object.assign(configs, changedConfigs);
-  },
-});
+export const configs = { ...defaultConfigs };
+// eslint-disable-next-line
+export let changedConfigs = {};

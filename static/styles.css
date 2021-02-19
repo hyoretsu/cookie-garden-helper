@@ -1,0 +1,18 @@
+#cookieGardenHelper {
+  background: #000 url(https://orteil.dashnet.org/cookieclicker/img/darkNoise.jpg);
+  display: none;
+  padding: 1vw;
+  position: inherit;
+}
+#cookieGardenHelper.visible {
+  display: flex;
+  flex-direction: column;
+}
+#cookieGardenHelper div {
+  display: flex;
+}
+#cookieGardenHelper div span {
+  color: #808080;
+  font-style: italic;
+  margin-left: 16%;
+}
